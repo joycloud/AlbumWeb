@@ -6,7 +6,7 @@
     * Vue.js
   * 前端程式
     * Sass
-    * Javascript
+    * JavaScript
   * 後端架構
     * .Net Core 3.1
   * 後端程式

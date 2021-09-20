@@ -1,8 +1,8 @@
 
 # My Album Web (.Net Core 3.1)
 
-## Index
-  * 專案架構.
+## 專案架構
+  * 主要Web專案使用axios呼叫API處理邏輯運算，API則呼叫DataSource類別關聯資料取資料。
 
 ![image](https://github.com/joycloud/AlbumCore/blob/master/pics/008.PNG)
 

@@ -1,6 +1,20 @@
 
 # My Album Web (.Net Core 3.1)
 
+## 使用技術
+  * 前端架構
+    * Vue.js
+  * 前端程式
+    * Sass
+    * Javascript
+  * 後端架構
+    * .Net Core 3.1
+  * 後端程式
+    * C#
+    * LINQ
+  * 資料庫
+    * MS SQL
+
 ## 專案架構
   * 主要Web專案使用axios呼叫API處理邏輯運算，API則呼叫DataSource類別關聯資料取資料。
 

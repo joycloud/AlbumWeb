@@ -1,6 +1,11 @@
 
 # My Album Web (.Net Core 3.1)
 
+## Index
+  * 專案架構.
+
+![image](https://github.com/joycloud/AlbumCore/blob/master/pics/008.PNG)
+
 ---
 
 ## Index

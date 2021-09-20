@@ -1,0 +1,57 @@
+
+//套用中文字體(Noto Sans TC)
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+$size_600: 600px
+$size_1375: 1375px
+
+.album-list
+    position: absolute
+    left: 14%
+    right: 10%
+    padding: 5% 0px 0px 0px
+    ul
+        padding-inline-start: 0
+    h1
+        color: aliceblue
+        text-align: left
+        margin-top: 1%
+    li
+        float: left
+        margin-bottom: 15px
+        margin-right: 15px
+        width: 300px
+        //卷軸隱藏
+        overflow: hidden
+        border-radius: 5px
+        position: relative        
+        //照片縮放
+        img
+            transform: scale(1, 1);
+            transition: all 0.2s ease-out;
+            &:hover
+                transform: scale(1.1, 1.1);
+
+// RWD修改相簿大小
+body
+    @media screen and (max-width: $size_1375)
+        .album-list
+            li
+                width: 255px
+
+.album-title
+    width: 100%
+    height: 30px
+    background-color: #1b1b1b
+    color: #fff
+    font-size: 13px
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    bottom: 0px
+    opacity: 0.8
+    h6
+        margin-top: 4%
+        font-family: 'Noto Sans TC', sans-serif
+

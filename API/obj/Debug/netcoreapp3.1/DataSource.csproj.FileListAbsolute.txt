@@ -1,0 +1,12 @@
+C:\Users\b2551\Desktop\MyGitKraken\AlbumWeb\API\bin\Debug\netcoreapp3.1\DataSource.deps.json
+C:\Users\b2551\Desktop\MyGitKraken\AlbumWeb\API\bin\Debug\netcoreapp3.1\DataSource.dll
+C:\Users\b2551\Desktop\MyGitKraken\AlbumWeb\API\bin\Debug\netcoreapp3.1\DataSource.pdb
+C:\Users\b2551\Desktop\MyGitKraken\AlbumWeb\API\obj\Debug\netcoreapp3.1\DataSource.AssemblyInfoInputs.cache
+C:\Users\b2551\Desktop\MyGitKraken\AlbumWeb\API\obj\Debug\netcoreapp3.1\DataSource.AssemblyInfo.cs
+C:\Users\b2551\Desktop\MyGitKraken\AlbumWeb\API\obj\Debug\netcoreapp3.1\DataSource.csproj.CoreCompileInputs.cache
+C:\Users\b2551\Desktop\MyGitKraken\AlbumWeb\API\obj\Debug\netcoreapp3.1\DataSource.dll
+C:\Users\b2551\Desktop\MyGitKraken\AlbumWeb\API\obj\Debug\netcoreapp3.1\DataSource.pdb
+C:\Users\b2551\Desktop\MyGitKraken\AlbumWeb\API\bin\Debug\netcoreapp3.1\DataSource.runtimeconfig.json
+C:\Users\b2551\Desktop\MyGitKraken\AlbumWeb\API\bin\Debug\netcoreapp3.1\DataSource.runtimeconfig.dev.json
+C:\Users\b2551\Desktop\MyGitKraken\AlbumWeb\API\obj\Debug\netcoreapp3.1\DataSource.genruntimeconfig.cache
+C:\Users\b2551\Desktop\MyGitKraken\AlbumWeb\API\obj\Debug\netcoreapp3.1\DataSource.csproj.AssemblyReference.cache

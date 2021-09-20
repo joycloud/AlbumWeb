@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link href="~/css/index.css" rel="stylesheet" />
+
+<div id="app">
+    <div class="content">
+        <h4>welcome to</h4>
+        <h1 class="studio">{{formData.name}}'s<br>{{formData.remark}}</h1>
+        <button type="button" class="index-button">take a tour</button>
+    </div>
+
+    <!-- 遮住泡泡用 -->
+    <div id="bubbles-back" class="bubbles-cover">
+    </div>
+    <!-- 泡泡動畫 -->
+    <div class="bubbles">
+        <img src="~/img/bubble.png" />
+        <img src="~/img/bubble.png" />
+        <img src="~/img/bubble.png" />
+        <img src="~/img/bubble.png" />
+        <img src="~/img/bubble.png" />
+        <img src="~/img/bubble.png" />
+        <img src="~/img/bubble.png" />
+    </div>
+</div>
+<script src="~/js/vueJs/index.js"></script>

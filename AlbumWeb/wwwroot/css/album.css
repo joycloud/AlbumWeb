@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+.album-list {
+  position: absolute;
+  left: 14%;
+  right: 10%;
+  padding: 5% 0px 0px 0px;
+}
+
+.album-list ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+.album-list h1 {
+  color: aliceblue;
+  text-align: left;
+  margin-top: 1%;
+}
+
+.album-list li {
+  float: left;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+}
+
+.album-list li img {
+  -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.album-list li img:hover {
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+@media screen and (max-width: 1375px) {
+  body .album-list li {
+    width: 255px;
+  }
+}
+
+.album-title {
+  width: 100%;
+  height: 30px;
+  background-color: #1b1b1b;
+  color: #fff;
+  font-size: 13px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 0px;
+  opacity: 0.8;
+}
+
+.album-title h6 {
+  margin-top: 4%;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+/*# sourceMappingURL=album.css.map */

@@ -1,0 +1,57 @@
+$size_1375: 1375px
+$size_1024: 1024px
+$size_600: 600px
+
+nav
+    background: linear-gradient(to right,#162647, #16203b)
+    padding: 0rem 0rem
+    position: fixed !important
+    width: 100%
+    z-index: 3
+
+//bootstrap權重問題，直接呼叫他改css
+.navbar
+    padding: 0rem 1rem
+
+#navbarColor01
+    font-size: medium
+
+.nav-item
+    margin: 0px 40px
+    @media screen and (max-width: $size_600)
+        margin: 0px
+    >.nav-link
+        color: #b9b9b9c2 !important
+        font-size: 17px
+        &:hover
+            color: #5661c4 !important
+
+.container-logo
+    padding-left: 9%
+    font-size: 25px
+    color: #d6d3d3c2 !important
+    @media screen and (max-width: $size_600)
+        padding-left: 0%
+
+.container-link
+    padding-left: 3%
+
+.form-logIn
+    font-size: 15px
+    color: #7d7fa5
+
+.sightin-set
+    color: rgba(255,255,255,.5)
+    font-size: medium
+
+body
+    background-image: url(/imgs/DSC009891.png)    
+    height: 100vh    
+    background-position: unset
+    background-size: contain
+    font-family: monospace
+    @media screen and (max-width: $size_1375)
+        background-size: cover
+    
+
+

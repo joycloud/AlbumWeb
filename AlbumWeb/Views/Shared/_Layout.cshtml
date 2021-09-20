@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+@using Microsoft.AspNetCore.Http
+@using Newtonsoft.Json;
+@using Service.Dto;
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AlbumWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel=stylesheet type="text/css"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+    <link href="~/css/layout.css" rel="stylesheet" />
+
+    <!-- JavaScript -->
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+    @*<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>*@
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>*@
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- 引入Vue (開發時建議別使用壓縮板，會影響Vue Devtools運作)-->
+    @*<script src="//vuejs.org/js/vue.min.js"></script>*@
+    <!-- 引入组件库 -->
+    <script src="//unpkg.com/iview/dist/iview.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    @*<script src="~/js/app/plugin/apiList.js"></script>*@
+    <script src="~/js/app/plugin/apiPlugin.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+@{
+    //抓Session
+    string sessionData = Context.Session.GetString("UserSession");
+    string sessionMsg = "";
+    string account = "Login";
+    //排除初始化頁面
+    if (sessionData != null)
+    {
+        //回傳字串轉成object
+        DtoUserInfo userSession = JsonConvert.DeserializeObject<DtoUserInfo>(sessionData, new JsonSerializerSettings { MetadataPropertyHandling = MetadataPropertyHandling.Ignore });
+        //登入成功
+        if (string.IsNullOrEmpty(userSession.remark))
+        {
+            account = userSession.account;
+        }
+        //登入失敗
+        else
+        {
+            sessionMsg = userSession.remark;
+        }
+    }
+}
+<body>
+    <script type="text/javascript">
+        //抓session時因為C#打包編譯成dll時會變成亂碼，透過Html.Raw不編成html
+        var sessionMsg = '@Html.Raw(sessionMsg)';
+        if (sessionMsg.length > 0) {
+            sweetAlert("提示", sessionMsg, "error");
+        }
+    </script>
+    <div id="layoutApp">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand container-logo" :href="menu.logoPath">{{menu.logo}}</a>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active" v-for="item in menu.list">
+                        <a class="nav-link container-link" :href="item.path">
+                            {{item.name}}
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a id="user-account" class="nav-link form-logIn" :href="menu.logInType.path">@account</a>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <main role="main" class="pb-3">
+        <button id="demo3">Demo 3</button>
+        @RenderBody()
+    </main>
+    @*<footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - AlbumWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>*@
+
+    @*<script src="~/js/vueJs/layout.js"></script>*@
+    @*@RenderSection("Scripts", required: false)*@
+
+    <script src="~/js/vueJs/layout.js"></script>
+</body>
+</html>

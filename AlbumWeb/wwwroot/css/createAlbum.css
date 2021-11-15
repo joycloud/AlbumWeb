@@ -1,6 +1,6 @@
 ﻿
 
-#dropDIV {
+#dropArea {
     border-radius: 5px;
     padding: 20px;
     margin: 0 auto;
@@ -10,23 +10,23 @@
     opacity: 0.8;
     min-height: 500px;
     width: 68%;
-    margin-top: 4%;
-
+    margin-top: 10px;
 }
+
 #filename {
     height: 42px;
 }
 
 @media (max-width: 1527px) {
-    #dropDIV {
-        margin-top: 8%;
+    #dropArea {
+        /*    margin-top: 8%;*/
     }
 }
 
 @media (max-width: 575.98px) {
-    #dropDIV {
+    #dropArea {
         min-height: 250px;
-        margin-top: 16%;
+        /*  margin-top: 16%;*/
     }
 }
 
@@ -96,13 +96,25 @@
         left: 3px;
     }
 
-#DIV1 {
-    float: left;
+#input-btn {
     width: 358px;
     margin-left: 16%;
     display: flex;
     width: 17%;
+    margin-top: 71px;
 }
+@media (max-width: 1450px) {
+    #input-btn > input {
+        width: 165px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #input-btn > input {
+        width: 165px;
+    }
+}
+
 
 #DIV2 {
     float: left;

@@ -72,8 +72,10 @@ namespace AlbumWeb
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    //pattern: "{controller=Home}/{action=Index}/{id?}");
                     //pattern: "{controller=Home}/{action=CreateAlbum}");
+                    //pattern: "{controller=Home}/{action=AlbumView}");
+                    pattern: "{controller=Home}/{action=Login}");
             });
 
 

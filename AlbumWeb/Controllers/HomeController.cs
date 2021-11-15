@@ -12,13 +12,15 @@ using System.Net.Http;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
-using Service.Dto;
+using Service.Tools;
 using Microsoft.Extensions.Hosting;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using System.Drawing;
 using System.Drawing.Imaging;
+using Microsoft.AspNetCore.Routing;
+using Service.Dto;
 
 namespace AlbumWeb.Controllers
 {
@@ -157,20 +159,14 @@ namespace AlbumWeb.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("api/Home/GetSession")]
-        public string GetSession()
+        public DtoUserInfo GetSession()
         {
-            var userInfo = HttpContext.Session.GetString("UserSession");
-            string userId = "";
-            if (userInfo != null)
-            {
-                //加密後回傳
-                //userId = 
-                return "";
-            }
-            else
-            {
-                return userId;
-            }
+            var userSession = HttpContext.Session.GetString("UserSession");
+            DtoUserInfo userInfo = new DtoUserInfo();
+            //轉成物件
+            if (!string.IsNullOrEmpty(userSession))
+                userInfo = JsonConvert.DeserializeObject<DtoUserInfo>(userSession);
+            return userInfo;
         }
 
         #endregion
@@ -329,7 +325,7 @@ namespace AlbumWeb.Controllers
             string smailAlbum = albumPath + "\\smail";
             string bigPath = bigAlbum + "\\" + picFile[0].Name;
             string smailPath = smailAlbum + "\\" + picFile[0].Name;
-            DtpAlbum dtoPostApi = new DtpAlbum()
+            DtoAlbum dtoPostApi = new DtoAlbum()
             {
                 id = id,
                 albumName = albumName,
@@ -445,5 +441,25 @@ namespace AlbumWeb.Controllers
         }
 
         #endregion
+
+        /// <summary>
+        /// 相簿檢視
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult AlbumView()
+        {
+
+            return View();
+        }
+
+        /// <summary>
+        /// 照片清單
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public IActionResult PicView(string name)
+        {
+            return View();
+        }
     }
 }

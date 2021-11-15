@@ -10,6 +10,8 @@ new Vue({
             path: '',
             remark: '',
         },
+        userInfo: {
+        },
     },
     methods: {
         getIndexData: function () {
@@ -24,12 +26,28 @@ new Vue({
             }).finally(function () {
                 //vm.showLoading(false);
             });
+
+            //取得Session
+            vm.API_GetSession().then(function (response) {
+                if (response.data) {
+                    vm.userInfo = response.data;
+                }
+                //})
+                //    .catch(function (error) {
+                //    vm.ErrorProcess(error);
+            }).finally(function () {
+                //vm.showLoading(false);
+            });
         },
     },
     created() {
         var vm = this;
 
         vm.getIndexData();
+
+
+
+
         ////刪除泡泡遮罩
         //$().ready(function () {
         //    $('#bubbles-back').remove();

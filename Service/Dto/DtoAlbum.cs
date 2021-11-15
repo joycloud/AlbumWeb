@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Service.Dto
 {
-    public class DtpAlbum
+    public class DtoAlbum
     {
         /// <summary>
         /// 相簿id
@@ -20,8 +20,16 @@ namespace Service.Dto
         /// </summary>
         public string picName { get; set; }
         /// <summary>
-        /// 相片路徑
+        /// 大圖路徑
         /// </summary>
         public string bigPicPath { get; set; }
+        /// <summary>
+        /// 小圖路徑
+        /// </summary>
+        public string smallPicPath { get; set; }
+        /// <summary>
+        /// href路徑
+        /// </summary>
+        public string hrefPath { get; set; }
     }
 }

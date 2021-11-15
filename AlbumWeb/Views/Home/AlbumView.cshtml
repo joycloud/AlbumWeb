@@ -1,0 +1,19 @@
+﻿
+
+<link href="~/css/albumView.css" rel="stylesheet" />
+
+<div id="app">
+    <div class="album">
+        <ul>
+            <li v-for="item in albumList">
+                <a :href="item.href">
+                    <img class="album-img" :src="item.path" alt="">
+                    <div class="album-title">
+                        <h6 class="title">{{item.name}}</h6>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="~/js/vueJs/albumView.js"></script>

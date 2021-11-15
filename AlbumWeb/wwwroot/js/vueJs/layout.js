@@ -36,9 +36,5 @@ new Vue({
     created() {
         var vm = this;
         vm.getMenuData();
-        // 如果有Session變更狀態
-        // if (Session) {
-        //   vm.menu.loginType === '帳號';
-        // }
     },
 })

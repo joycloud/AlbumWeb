@@ -17,6 +17,11 @@ var apiPlugin = {
             var uri = "/api/Home/GetSession";
             return axios.get(uri);
         }
+        //取相簿清單資料
+        Vue.prototype.API_GetAlbumList = function (userAccount) {
+            var uri = "/api/Common/GetAlbumList";
+            return axios.get(uri, { params: {'userAccount': userAccount } });
+        }
     }
 }
 

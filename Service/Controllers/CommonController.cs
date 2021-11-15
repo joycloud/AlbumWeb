@@ -2,6 +2,7 @@
 using LinqKit;
 using Microsoft.AspNetCore.Mvc;
 using Service.Dto;
+using Service.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace Service.Controllers
     {
         private MISContext db = new MISContext();
 
+        #region 取Menu、Logo資料
         /// <summary>
         /// 取Menu、Logo資料
         /// </summary>
@@ -24,7 +26,7 @@ namespace Service.Controllers
         [Route("api/Common/GetAppMenuList")]
         [Obsolete]
         //[ValidateAntiForgeryToken] //避免XSS、CSRF攻擊
-        public DtoAppMenu GetAppMenuList(string systemName,string userAccount)
+        public DtoAppMenu GetAppMenuList(string systemName, string userAccount)
         {
             //取相簿Menu資料
             List<AppMenu> appMenu = (from c in db.SystemLists
@@ -38,7 +40,7 @@ namespace Service.Controllers
             //未登入
             if (userAccount == "Login")
             {
-               menuWhere.And(o=>o.AppMenuName.Contains("Album"));
+                menuWhere.And(o => o.AppMenuName.Contains("Album"));
             }
             //已登入
             else
@@ -79,7 +81,9 @@ namespace Service.Controllers
             }
             return dtoAppMenu;
         }
+        #endregion
 
+        #region 取Index資料
         /// <summary>
         /// 取Index資料
         /// </summary>
@@ -104,9 +108,11 @@ namespace Service.Controllers
             };
             return dtoItem;
         }
+        #endregion
 
+        #region 檢查帳號
         /// <summary>
-        /// 取Index資料
+        /// 檢查帳號
         /// </summary>
         /// <param name="userInfo"></param>
         [HttpPost]
@@ -114,12 +120,13 @@ namespace Service.Controllers
         //[ValidateAntiForgeryToken] //避免XSS、CSRF攻擊
         public DtoUserInfo CheckUser([FromBody] DtoUserInfo userInfo)
         {
+            string password = SHA256.Encryption(userInfo.password);     //SHA256加密
             //檢查帳號、密碼
             Users userData = (from c in db.SystemLists
                               join o in db.Users on c.Id equals o.SystemListId
                               where c.SystemName == "AlbumWeb" && c.IsEnable == true &&
                               o.Account == userInfo.account &&
-                              o.Password == userInfo.password &&
+                              o.Password == password &&
                               o.IsEnable == true
                               select o).FirstOrDefault();
 
@@ -131,12 +138,14 @@ namespace Service.Controllers
             else
             {
                 UserRrequest.id = userData.Id;
-                UserRrequest.account = userData.Account;
+                UserRrequest.account = userInfo.account;
                 UserRrequest.lev = userData.Lev;
             };
             return UserRrequest;
         }
+        #endregion
 
+        #region 檢查相簿是否重複
         /// <summary>
         /// 檢查相簿是否重複
         /// </summary>
@@ -161,6 +170,9 @@ namespace Service.Controllers
             }
             return dtoMsg;
         }
+        #endregion
+
+        #region 建立相簿
         /// <summary>
         /// 建立相簿
         /// </summary>
@@ -197,14 +209,17 @@ namespace Service.Controllers
 
             return dtoMsg;
         }
+        #endregion
+
+        #region 建立相片
         /// <summary>
-        /// 建立相簿
+        /// 建立相片
         /// </summary>
         /// <param name="albumName"></param>
         [HttpPost]
         [Route("api/Common/CreatePic")]
         //[ValidateAntiForgeryToken] //避免XSS、CSRF攻擊
-        public DtoMsg CreatePic([FromBody] DtpAlbum dtpAlbum)
+        public DtoMsg CreatePic([FromBody] DtoAlbum dtpAlbum)
         {
             DtoMsg dtoMsg = new DtoMsg();
 
@@ -220,14 +235,14 @@ namespace Service.Controllers
 
             //try
             //{
-                using (MISContext db = new MISContext())
-                {
-                    db.Pictures.Add(picture);
-                    db.SaveChanges();
-                    dtoMsg.isCheck = true;
-                    //取出id
-                    dtoMsg.id = dtpAlbum.id;
-                }
+            using (MISContext db = new MISContext())
+            {
+                db.Pictures.Add(picture);
+                db.SaveChanges();
+                dtoMsg.isCheck = true;
+                //取出id
+                dtoMsg.id = dtpAlbum.id;
+            }
             //}
             //catch (Exception)
             //{
@@ -236,5 +251,50 @@ namespace Service.Controllers
             //}
             return dtoMsg;
         }
+        #endregion
+
+        #region 取相簿清單
+        /// <summary>
+        /// 取相簿清單
+        /// </summary>
+        /// <param name="albumName"></param>
+        [HttpGet]
+        [Route("/api/Common/GetAlbumList")]
+        //[ValidateAntiForgeryToken] //避免XSS、CSRF攻擊
+        public DtoAlbum GetAlbumList(string userAccount)
+        {
+            DtoAlbum dtoAlbum = new DtoAlbum();
+
+
+
+            //取相簿
+            //List<DtoAlbum> getPictures = db.Albums.Where(x => x.AlbumsId == dtpAlbum.id).OrderByDescending(o => o.Id).FirstOrDefault();
+
+            //Pictures picture = new Pictures();
+            //picture.AlbumsId = dtpAlbum.id;
+            //picture.Path = dtpAlbum.bigPicPath;
+            //picture.Name = dtpAlbum.picName;
+            //picture.CreateDate = DateTime.Now;
+            //picture.IsEnable = true;
+
+            ////try
+            ////{
+            //using (MISContext db = new MISContext())
+            //{
+            //    db.Pictures.Add(picture);
+            //    db.SaveChanges();
+            //    dtoMsg.isCheck = true;
+            //    //取出id
+            //    dtoMsg.id = dtpAlbum.id;
+            //}
+            //}
+            //catch (Exception)
+            //{
+            //    dtoMsg.isCheck = false;
+            //    dtoMsg.msg = "儲存相片" + dtpAlbum.picName + "失敗!";
+            //}
+            return dtoAlbum;
+        }
+        #endregion
     }
 }

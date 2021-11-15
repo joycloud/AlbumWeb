@@ -1,14 +1,12 @@
 ﻿
 <link href="~/css/createAlbum.css" rel="stylesheet" />
 
-<h1>CreateAlbum</h1>
-<div id="DIV1">
+<p></p>
+<div id="input-btn">
     <input type="text" class="form-control" id="albumName" placeholder="Enter album name" value="">
     <button id="btn-upload" class="btn btn-light" onclick="Upload()">Upload</button>
 </div>
-
-<p></p>
-<div id="dropDIV" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)">
+<div id="dropArea" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)">
     <div style="text-align:center">Drop files here</div>
     <div id="imgDIV"></div>
 </div>

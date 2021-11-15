@@ -1,78 +1,85 @@
+#layoutApp {
+    height: 15px;
+}
+
 nav {
-  background: -webkit-gradient(linear, left top, right top, from(#162647), to(#16203b));
-  background: -webkit-linear-gradient(left, #162647, #16203b);
-  background: -o-linear-gradient(left, #162647, #16203b);
-  background: linear-gradient(to right, #162647, #16203b);
-  padding: 0rem 0rem;
-  position: fixed !important;
-  width: 100%;
-  z-index: 3;
+    /*    background: -webkit-gradient(linear, left top, right top, from(#162647), to(#16203b));
+    background: -webkit-linear-gradient(left, #162647, #16203b);
+    background: -o-linear-gradient(left, #162647, #16203b);
+    background: linear-gradient(to right, #162647, #16203b);*/
+    background: #95959500 !important;
+    padding: 0rem 0rem;
+    position: fixed !important;
+    width: 100%;
+    z-index: 3;
 }
 
 .navbar {
-  padding: 0rem 1rem;
+    padding: 0rem 1rem;
 }
 
 #navbarColor01 {
-  font-size: medium;
+    font-size: medium;
 }
 
 .nav-item {
-  margin: 0px 40px;
+    margin: 0px 40px;
 }
 
 @media screen and (max-width: 600px) {
-  .nav-item {
-    margin: 0px;
-  }
+    .nav-item {
+        margin: 0px;
+    }
 }
 
 .nav-item > .nav-link {
-  color: #b9b9b9c2 !important;
-  font-size: 17px;
+    color: #b9b9b9c2 !important;
+    font-size: 17px;
 }
 
-.nav-item > .nav-link:hover {
-  color: #5661c4 !important;
-}
+    .nav-item > .nav-link:hover {
+        color: #5661c4 !important;
+    }
 
 .container-logo {
-  padding-left: 9%;
-  font-size: 25px;
-  color: #d6d3d3c2 !important;
+    padding: 0 9% 0 10%;
+    font-size: 25px;
+    color: #d6d3d3c2 !important;
 }
 
 @media screen and (max-width: 600px) {
-  .container-logo {
-    padding-left: 0%;
-  }
+    .container-logo {
+        padding-left: 0%;
+    }
 }
 
 .container-link {
-  padding-left: 3%;
+    padding-left: 3%;
 }
 
 .form-logIn {
-  font-size: 15px;
-  color: #7d7fa5;
+    font-size: 15px;
+    color: #7d7fa5;
 }
 
 .sightin-set {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: medium;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: medium;
 }
 
 body {
-  background-image: url(/img/DSC009891.png);
-  height: 100vh;
-  background-position: unset;
-  background-size: contain;
-  font-family: monospace;
+    background-image: url(/img/DSC009891.png);
+    height: 100vh;
+    background-position: unset;
+    background-size: contain;
+    font-family: monospace;
 }
 
 @media screen and (max-width: 1375px) {
-  body {
-    background-size: cover;
-  }
+    body {
+        background-size: cover;
+    }
 }
+
+
 /*# sourceMappingURL=Layout.css.map */

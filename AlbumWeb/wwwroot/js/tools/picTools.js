@@ -103,7 +103,7 @@ async function Upload() {
             swal("上傳成功!", "相簿：" + $('#albumName').val() + "已上傳!", "success")
                 .then(() => {
                     //導至相簿瀏覽頁
-                    location.href = location.protocol + "//" + location.host + "/Home/Index";
+                    location.href = location.protocol + "//" + location.host + "/Home/CreateAlbum";
                 });
         }
         //相簿建立失敗

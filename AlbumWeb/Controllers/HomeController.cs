@@ -39,7 +39,10 @@ namespace AlbumWeb.Controllers
         //{
         //    _logger = logger;
         //}
-
+        /// <summary>
+        /// index
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
 

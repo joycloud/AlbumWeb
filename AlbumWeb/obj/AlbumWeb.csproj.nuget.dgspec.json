@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\AlbumWeb\\AlbumWeb.csproj": {}
+    "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\AlbumWeb\\AlbumWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\AlbumWeb\\AlbumWeb.csproj": {
+    "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\AlbumWeb\\AlbumWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\AlbumWeb\\AlbumWeb.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\AlbumWeb\\AlbumWeb.csproj",
         "projectName": "AlbumWeb",
-        "projectPath": "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\AlbumWeb\\AlbumWeb.csproj",
-        "packagesPath": "C:\\Users\\b2551\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\AlbumWeb\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\AlbumWeb\\AlbumWeb.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\AlbumWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\b2551\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -34,8 +32,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\Service\\Service.csproj": {
-                "projectPath": "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\Service\\Service.csproj"
+              "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\Service\\Service.csproj"
               }
             }
           }
@@ -97,28 +95,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\API\\DataSource.csproj": {
+    "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\API\\DataSource.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\API\\DataSource.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\API\\DataSource.csproj",
         "projectName": "DataSource",
-        "projectPath": "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\API\\DataSource.csproj",
-        "packagesPath": "C:\\Users\\b2551\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\API\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\API\\DataSource.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\b2551\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -175,28 +171,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\Service\\Service.csproj": {
+    "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\b2551\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\Service\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\b2551\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -209,8 +203,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\API\\DataSource.csproj": {
-                "projectPath": "C:\\Users\\b2551\\Desktop\\MyGitKraken\\AlbumWeb\\API\\DataSource.csproj"
+              "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\API\\DataSource.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\testGit\\AlbumWeb\\API\\DataSource.csproj"
               }
             }
           }
@@ -258,7 +252,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
